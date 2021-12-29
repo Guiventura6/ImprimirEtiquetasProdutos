@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 
+
 namespace ImprimirEtiquetas.Entities
 {
     class ImportedProduct : Product
@@ -22,7 +23,7 @@ namespace ImprimirEtiquetas.Entities
 
         public sealed override string PriceTag()
         {
-            return $"{base.PriceTag()} (Customs fee: $ {CustomsFee.ToString("F2", CultureInfo.InvariantCulture)})";
+            return $"{Name} $ {TotalPrice().ToString("F2", CultureInfo.InvariantCulture)} (Customs fee: $ {CustomsFee.ToString("F2", CultureInfo.InvariantCulture)})";
         }
     }
 }
