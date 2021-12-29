@@ -16,7 +16,7 @@ namespace ImprimirEtiquetas.Entities
             Price = price;
         }
 
-        public string priceTag()
+        public virtual string PriceTag()
         {
             return $"{Name} $ {Price.ToString("F2", CultureInfo.InvariantCulture)} ";
         }
