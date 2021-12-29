@@ -15,7 +15,7 @@ namespace ImprimirEtiquetas.Entities
             ManufactureDate = manufactureDate;
         }
 
-        public override string PriceTag()
+        public sealed override string PriceTag()
         {
 
             return $"{Name} (used) $ {Price} (Manufacture date: {ManufactureDate})";
