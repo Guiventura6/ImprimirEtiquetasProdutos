@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace ImprimirEtiquetas.Entities
 {
@@ -17,9 +18,7 @@ namespace ImprimirEtiquetas.Entities
 
         public sealed override string PriceTag()
         {
-
-            return $"{Name} (used) $ {Price} (Manufacture date: {ManufactureDate})";
-            
+            return $"{Name} (used) $ {Price.ToString("F2", CultureInfo.InvariantCulture)} (Manufacture date: {ManufactureDate:dd/MM/yyyy})";            
         }
     }
 }
